@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <form action="" method="get">
+    Ho ten:
+    <input type="text" name="userName" id="userName"> <br>
+    
+    Mat khau:
+    <input type="password" name="password" id="password"> <br>
+    dia chi:
+    <input type="text" name="address" id="address"> <br>
+   <input onclick="xu_ly()" type="button" value="dang nhap">
+   <script>
+    function xu_ly(){
+        var userName = document.getElementById('userName').value
+        var password= document.getElementById('password').value
+        var address = document.getElementById('address').value
+
+        alert(userName);
+        alert(password);
+        alert(address);
+
+
+
+}
+
+   </script>
+
+
+
+   </form>
+   
+   
+</body>
+</html>
