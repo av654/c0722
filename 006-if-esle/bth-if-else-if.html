@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let userName = prompt('nhap_ten_admin')
+        //nhap la vy
+        if (userName == 'khang' || userName == 'khang1') {
+            let pass = prompt('nhap_mat_khau');
+            // neu mat khau == khang thi true
+            if (pass !== '18') {
+                alert('wellcome');
+            }
+            //rong
+            else {
+                alert('canceled.');
+            }
+            // alert('dung la vy')
+        }
+        //khong nhap vy
+        else {
+            alert('khong phai admin')
+        }
+
+    // } else if (pass == null){
+    //     alert('canceled.');
+    // }
+    // else if{
+    //     alert('wrong password');
+    // }
+    // else if (userName == null){
+    //     alert('canceled');
+    // }
+    // else{
+    //     alert("I don't know you");
+    // }
+
+
+    </script>
+
+</body>
+
+</html>
