@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // let result =1;
+        // if (n>1){
+        //     for (let i=1;i<=n;i++){
+
+        //     }
+        // }
+
+
+        // cau1
+
+        /*
+        
+        *
+        * *
+        * * *
+        * * * *
+        * * * * *
+        
+        i:1
+            k:1  
+        i:2
+            k:1
+            k:2
+        i:3
+            k:1
+            k:2
+            k:3
+        i:4
+            k:1
+            k:2
+            k:3
+            k:4
+        i:5
+            k:1
+            k:2
+            k:3
+            k:4
+            k:5
+        */
+
+        for (var i = 1; i <= 5; i++) {
+            for (var k = 1; k <= i; k++) {
+                document.write(' * ');
+            }
+            document.write('<br>')
+        }
+
+        document.write('<hr>')
+
+        /*
+        
+        * * * * *
+        * * * *
+        * * *
+        * *
+        *
+        
+        i:1
+            k:1
+            k:2
+            k:3
+            k:4
+            k:5
+        i:2
+            k:1
+            k:2
+            k:3
+            k:4
+        i:3
+            k:1
+            k:2
+            k:3
+        i:4
+            k:1
+            k:2
+        i:5
+            k:1
+    
+        */
+
+        for (var i = 1; i <= 5; i++) {
+            for (var k = 1; k <= (6 - i); k++) {
+                document.write(' * ');
+            }
+            document.write('<br>')
+
+        }
+        document.write('<hr>')
+
+        /*
+        
+        - - - - *
+        - - - * *
+        - - * * *
+        - * * * *
+        * * * * *
+
+        i:1
+            k:1
+
+            t:1
+            t:2
+            t:3
+            t:4
+        i:2
+            k:1
+            k:2
+            t:3
+        i:3
+            k:1
+            k:2
+            k:3
+            t:2
+        i:4
+            k:1
+            k:2
+            k:3
+            k:4
+            t:1
+        i:5
+            k:1
+            k:2
+            k:3
+            k:4
+            k:5
+            t:0
+        
+        
+        */
+
+        for (var i = 1; i <= 5; i++) {
+            for (var t = 1; t <= 5 - i; t++) {
+                document.write(' _ ');
+            }
+            for (var k = 1; k <= i; k++) {
+                document.write(' * ');
+            }
+            document.write('<br>')
+
+        }
+        document.write('<hr>')
+
+
+
+        /*
+        * * * * *
+        - * * * *
+        - - * * *
+        - - - * *
+        - - - - *
+
+        i:1
+            t:0
+            k:5
+        i:2
+            t:1
+            k:4
+        i:3
+            t:2
+            k:3
+        i:4
+            t:3
+            k:2
+        i:5
+            t:4
+            k:1
+        
+        */
+
+        for(var i=1;i<=5;i++){
+            for(var t=1;t<=i-1;t++){
+                document.write(' _ ');
+
+            }
+
+            for (var k=1;k<=6-i;k++){
+                document.write(' * ');
+
+            }
+            document.write('<br>')
+
+        }
+
+
+        /*
+        
+        * * * * * * * * * *
+        * - - - - - - - - *
+        * - - - - - - - - *
+        * * * * * * * * * *
+        
+        i:1
+            k:10
+        i:2
+            k:2
+        i:3
+            k:2
+        i:4
+            k:10
+        
+        */
+
+                                                                                                                                     
+
+
+
+    </script>
+</body>
+
+</html>

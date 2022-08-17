@@ -12,22 +12,41 @@
     <script>
 
 
-        let sout;
-        sout = "<table border='1' width='300' cellspacing='0' cellpadding='3'>"
+        // let sout;
+        // sout = "<table border='1' width='300' cellspacing='0' cellpadding='3'>"
 
-        for (var i = 1; i < 10; i++) {
-            sout = sout + "<tr>";
-            for (j = 2; j <= 10; j++) {
+        // for (var i = 1; i < 10; i++) {
+        //     sout = sout + "<tr>";
+        //     for (j = 2; j <= 10; j++) {
 
-                // total=`${j} x ${i} = ${j*i}`;
-                // document.write(`${i} x ${j} = ${j * i} <br>`)
-                sout = sout + "<td>" + j + "x" + i + "=" + i * j + "</td>";
+        //         // total=`${j} x ${i} = ${j*i}`;
+        //         // document.write(`${i} x ${j} = ${j * i} <br>`)
+        //         sout = sout + "<td>" + j + "x" + i + "=" + i * j + "</td>";
+        //     }
+        //     sout = sout + "</tr>";
+
+        // }
+        // sout = sout + "</table>";
+        // document.write(sout);
+
+
+        // for(var i=1; i<3; i++){
+        //     for(k=1; k<=5 ; k++){
+
+        //         document.write('*')
+        //     }
+        //     document.write('<br>')
+        // }
+            for( i=1; i<=5; i++){
+                for (var k=1;k<= (6-i) ;k++){
+                    document.write('*')
+                }
+                document.write('<br>')
             }
-            sout = sout + "</tr>";
 
-        }
-        sout = sout + "</table>";
-        document.write(sout);
+
+
+
 
 
     </script>
