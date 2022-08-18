@@ -12,33 +12,33 @@
     <script>
 
 
-        // for (let i=1 ; i<=10; i++){
-        //     if(i==7){
-        //        continue
+        for (let i=1 ; i<=10; i++){
+            if(i==7){
+               continue
 
-        //     }
-        //     console.log(i)
-        // }
-        // bai1
+            }
+            console.log(i)
+        }
+        bai1
 
-        // for (let i = 1; i < 100; i++) {
-        //     document.write(i)
-        //     // if (i == 99) {
-        //     //    break;
-        //     // }
-        //     console.log("da hoan thanh")
-        // }
-            // bai2
-            // let num = parseInt(prompt("nhap_vao"))
-            // if( num>100){
-            //     console.log('tang nhiet do')
-            // }else{ (num <20)
-            //     console.log('giam nhiet do')
+        for (let i = 1; i < 100; i++) {
+            document.write(i)
+            // if (i == 99) {
+            //    break;
             // }
+            console.log("da hoan thanh")
+        }
+            bai2
+            let num = parseInt(prompt("nhap_vao"))
+            if( num>100){
+                console.log('tang nhiet do')
+            }else{ (num <20)
+                console.log('giam nhiet do')
+            }
             
                
         
-        // bai3
+        bai3
             var x0=0;
             var x1=1
             var xn;
@@ -61,51 +61,56 @@
             console.log(total)
 
 
-            // bai4
-            // var x0=0;
-            // var x1=1;
-            // var xn;
-            // document.write(x0+',')
-            // document.write(x1+',')
-            // for(i=0;i<8;i++){
-            //     xn=x1+x0;
-            //     x0=x1;
-            //     x1=xn;
-            //     document.write(xn+',')
-            //     if(xn%5==0){
-            //         console.log(xn)
-            //     }
-            // }
-            // bai5
-            // var x0=0;
-            // var x1=1;
-            // var xn;
-            // var total;
-            // document.write(x0+',')
-            // document.write(x1+',')
-            // for(i=0;i<8;i++){
-            //     xn=x1+x0;
-            //     x0=x1;
-            //     x1=xn;
-            //     document.write(xn+',')
-            //     if(xn%7==0){
-            //         console.log(xn)
-            //         break;
-            //     }
-            //     console.log(total)
-            // }
+            bai4
+            var x0=0;
+            var x1=1;
+            var xn;
+            document.write(x0+',')
+            document.write(x1+',')
+            for(i=0;i<8;i++){
+                xn=x1+x0;
+                x0=x1;
+                x1=xn;
+                document.write(xn+',')
+                if(xn%5==0){
+                    console.log(xn)
+                }
+            }
+            bai5
+            var x0=0;
+            var x1=1;
+            var xn;
+            var total;
+            document.write(x0+',')
+            document.write(x1+',')
+            for(i=0;i<8;i++){
+                xn=x1+x0;
+                x0=x1;
+                x1=xn;
+                document.write(xn+',')
+                if(xn%7==0){
+                    console.log(xn)
+                    break;
+                }
+                console.log(total)
+            }
 
         // bai7
+        var numbers= []
         for (let i = 1; i <= 100; i++) {
-
-            if (i % 3) {
-                document.write(i+"Fizz<br>")
-            } else if (i % 5) {
-                document.write(i+"Buzz<br>")
-            }else if(i%3==0 && i%5==0){
+            if(i%3==0 && i%5==0){
                 document.write( i+"Fizz + buzz<br>")
-            }
+                numbers.push('Fizz + puzz')
+            }else if (i % 3 ==0) {
+                document.write(i+"Fizz<br>")
+                numbers .push('Fizz')
+            } else if (i % 5==0) {
+                document.write(i+"Buzz<br>")
+                numbers.push('buzz')
+            } 
         }
+
+        console.log(numbers)
         
        
     </script>

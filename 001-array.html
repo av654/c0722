@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // var books_1 = 'van'
+        // var books_2 = 'su'
+        // var books_3 = 'dia'
+        // khai bao mang
+        var books = ['van', 'su', 'dia'];
+        //            0     1   2
+        var books = new Array('van', 'su', 'dia');
+        // truay xuat phan tu:van
+        console.log(books[0]);
+
+        // truy xuat phan tu dia:
+
+        console.log(books[2]);
+        // xem do dai cua mang
+        for (var i = 0; i < books.length; i++) {
+            console.log(books[i]);
+
+        }
+
+        //dung vong lap
+        for (var i = 0; i < 3; i++) {
+
+            console.log(books[i]);
+
+        }
+        // thay the gia tri
+        books[0] = 'van hoc';
+        books[1] = 'lich su';
+        books[2] = 'dia ly';
+        // them phan tu vao push
+        books.push('toan')
+
+        // them phan tu vao length
+
+
+
+
+        /*
+        var books =['van','su','dia','toan','vat ly'];
+        
+        */
+        books[4] = 'vat ly';
+        books[books.length] = 'hoa';
+        //
+        console.log(books.length);//5
+
+
+
+
+        console.log(books)
+
+        var numbers = []
+        for (var i = 2; i <= 9; i++) {
+            numbers.push(i)
+
+
+        }
+        console.log(numbers)
+
+        var numbers = []
+        var total = 0
+        for (i = 0; i <= 10; i++) {
+            if (i % 2 == 0) {
+                numbers.push(i)
+                total = total + i
+            }
+
+        }
+        console.log(numbers)
+        console.log(total)
+
+        // bai7
+        var numbers = []
+        for (let i = 1; i <= 100; i++) {
+            if (i % 3 == 0 && i % 5 == 0) {
+                numbers.push('Fizz + puzz')
+            } else if (i % 3 == 0) {
+                numbers.push('Fizz')
+            } else if (i % 5 == 0) {
+                numbers.push('buzz')
+            } else {
+                numbers.push(i)
+            }
+        }
+
+        console.log(numbers)
+
+
+        //dong vong lap for,tao mang 0 -> 10
+
+        // console.log(books)
+
+
+
+    </script>
+</body>
+
+</html>
