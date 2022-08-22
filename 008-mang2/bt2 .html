@@ -16,22 +16,25 @@
     <script>
         function nhap() {
             let arr_eng = ["banana", "apple", "orange", "new", "red"];
-            let arr_vie = ["chuối",   "táo",    "cam",  "mới", "đỏ"];
-            let string = document.getElementById("string").value;
+            let arr_vie = ["chuối", "táo", "cam", "mới", "đỏ"];
+
             // let index_eng = 0;
-            let result = "";
-            for (let i = 0; i < arr_eng.length; i++) {
+            // let result = "";
+            for (let i = 0, j = 0; i < arr_eng.length, j < arr_vie.length; i++, j++) {
+                let string = document.getElementById("string").value;
                 if (string == arr_eng[i]) {
-                    index_eng = i;
-                    for (let j = 0; j < arr_vie.length; j++) {
-                        if (index_eng == j) {
-                            result = arr_vie[j];
-                        }
-                    }
+                    alert(arr_vie[j]);
+                    break;
                 }
+                else if (string == arr_vie[j]) {
+                    alert(arr_eng[i]);
+                    break;
+                }
+
+               
             }
-            document.getElementById("result").innerHTML = result;
         }
-        </script>
-</body >
-</html >
+    </script>
+</body>
+
+</html>
