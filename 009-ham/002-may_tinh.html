@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function tich(a, b) {
+            return a * b
+        }
+        function cong(a, b) {
+            return a + b
+        }
+        function tru(a, b) {
+            return a - b
+        }
+        function chia(a, b) {
+            return a / b
+        }
+        var phep_tinh = 'tru'
+        let ket_qua = ''
+        switch (phep_tinh) {
+            case 'cong':
+                ket_qua = cong(6, 2)
+                break;
+            case 'tru':
+                ket_qua = tru(6, 2)
+                break;
+            case 'nhan':
+                ket_qua = nhan(6, 2)
+                break;
+            case 'chia':
+                ket_qua = chia(6, 2)
+                break;
+            default:
+                break;
+        }
+
+
+        console.log(ket_qua);
+
+    </script>
+</body>
+
+</html>
