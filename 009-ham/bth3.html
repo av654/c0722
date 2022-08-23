@@ -10,21 +10,35 @@
 
 <body>
     <script>
-        function minArray(arr) {
-            if (arr.length == 0)
-                return -1;
-            let min = arr[0];
+        // function minArray(arr) {
+        //     if (arr.length == 0)
+        //         return -1;
+        //     let min = arr[0];
 
-            for (let i = 1; i < arr.length; i++) {
-                if (arr[i] < min) {
-                    min = arr[i];
-                }
-            }
-            return min;
+        //     for (let i = 1; i < arr.length; i++) {
+        //         if (arr[i] < min) {
+        //             min = arr[i];
+        //         }
+        //     }
+        //     return min;
+        // }
+        // let arr1 = [];
+        // let min = minArray(arr1);
+        // alert(min);
+
+
+
+        function swap(a, b) {
+            var temp = a;
+            a = b;
+            b = temp;
         }
-        let arr1 = [];
-        let min = minArray(arr1);
-        alert(min);
+
+        var a = 5;
+        var b = 10;
+        swap(a, b);
+        document.write("a = " + a + ", b = " + b);
+
     </script>
 </body>
 

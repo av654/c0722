@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //   bai1
+        function binh_phuong(so) {
+            console.log(so * so)
+        }
+
+        binh_phuong(7)
+        // bai2
+
+        function chu_vi_hinh_tron(r) {
+            var c = 2 * r * 3.14
+            console.log(c)
+        }
+        chu_vi_hinh_tron(5)
+        function tinh_dien_tich(r) {
+            var s = r * r * 3.14
+            console.log(s)
+        }
+        tinh_dien_tich(6)
+        // bai3
+        function giai_thua(so) {
+            let tich = 1
+            for (var i = so; i >= 1; i--) {
+                /*
+                i: 5 -> 5
+                i: 4 -> 20
+                i: 3 -> 60
+                i: 2 -> 120
+                i: 1 -> 120
+                */
+                tich = tich * i
+            }
+            console.log(tich)
+        }
+        giai_thua(5)
+        // bai4
+        function kiem_tra_so(gia_tri) {
+            if (typeof gia_tri == 'number') {
+                return true
+            }
+            else {
+                return false
+            }
+        }
+
+        console.log(kiem_tra_so(5))
+        console.log(kiem_tra_so('hello'))
+        // bai5
+        function tim_so_nho_nhat(so_1, so_2, so_3) {
+            if (so_1 < so_2 && so_1 < so_3) {
+                return so_1
+            }
+            if (so_2 < so_1 && so_2 < so_3) {
+                return so_2
+            }
+            if (so_3 < so_1 && so_3 < so_2) {
+                return so_3
+            }
+
+        }
+        console.log(tim_so_nho_nhat(7, 8, 5))
+        // bai6
+        function kiem_tra_so_duong(so) {
+            if (so > 0) {
+                return true
+            } else {
+                return false
+            }
+        }
+        console.log(kiem_tra_so_duong(1))
+        console.log(kiem_tra_so_duong(-1))
+        // bai7
+        function doi_cho(a, b) {
+            var c = a;
+            a = b
+            b = c
+            console.log(a, b)
+        }
+        doi_cho('bia', 'ruou')
+        // bai8
+        // var numbers = [3,5,7];
+        // var count = 0;
+        // var j=numbers.length-1;
+        function dao_nguoc_so_nguyen(x) {
+            let first = 0;
+            let last = x.length - 1;
+            while (first < last) {
+                let b = x[first];
+                x[first] = x[last];
+                x[last] = b;
+                first++;
+                last--;
+            }
+
+
+            console.log(x)
+        }
+        dao_nguoc_so_nguyen( [-3, 5, 1, 3, 2, 10])
+        // bai9
+        function so_lan_xuat_hien(mang_ki_tu,ki_tu){
+            // khai bao bien cnt=0
+            var cnt=0
+            // duyet mang_ki_tu
+            for(let i=0;i<mang_ki_tu.length;i++ ){
+                if(mang_ki_tu[i]==ki_tu){
+                    cnt++
+                }
+            }
+            return cnt
+            
+            // so sanh cac phan tu trong mang_ki_tu voi ki_tu
+
+            // cong cnt len 1 don vi neu tim thay 
+        }
+        console.log( so_lan_xuat_hien(['a','a','b','c'],'a' ) )
+        
+    </script>
+
+</body>
+
+</html>

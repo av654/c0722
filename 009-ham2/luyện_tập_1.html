@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- bai1 -->
+    <script>
+        // function alertMessage() {
+        //     console.log('xin chao')
+        // }
+        // alertMessage();
+        // //   bai2
+        // function a(a) {
+        //     console.log(a + 1)
+        // }
+        // a(4)
+        // // bai3
+        // function tham_so(a, b) {
+        //     if (a > b) {
+        //         return 'a>b'
+
+        //     } else {
+        //         return a + b
+
+        //     }
+        // }
+
+        // alert(tham_so(10, 5))
+        // bai4
+        // function addNumbers() {
+        //     firstNum = 9;
+        //     secondNum = 8;
+        //     result = firstNum + secondNum;
+        //     return result;
+        // }
+        // result = 0;
+        // alert(result)
+        // result = addNumbers();
+        // // result = addNumbers();
+        // alert(result)
+        // bai5
+        prompt(' nhap so')
+        var array = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus']
+        var array1 = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo']
+
+        function check_star(star) {
+            let index_star1 = 0;
+            let result = "";
+            for (let i = 0; i < star1.length; i++) {
+                if (star == star1[i]) {
+                    index_star1 = i;
+                    for (let j = 0; j < star2.length; j++) {
+                        if (index_star1 == j) {
+                            result = star2[j];
+                            return result;
+                        } else {
+                            result = "Không tìm thấy chòm sao"
+                            return result;
+                        }
+                    }
+                } else {
+                    result = "Không tìm thấy sao";
+                    return result;
+                }
+            }
+
+        }
+        let star = prompt("Nhập vào ngôi sao: ")
+        document.write(check_star(star));
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
