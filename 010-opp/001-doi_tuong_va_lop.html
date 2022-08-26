@@ -1,45 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-   <script>
-     
-    //===================DOI TUONG===============
-    //cu phap doi tuong
-    var objectName = {}; 
-    // hoac
-    var objectName = { property1:value1, property2:value2 };
+    <script>
 
-    //c1: tao mot doi tuong gom thong tin cua ban than
-    var self = {
-            firstname:"vy",
-            lastName: "Phan",
-            age:18,
-            eyeColor:"green",
-            
+        //===================DOI TUONG===============
+        //cu phap doi tuong
+        // var objectName = {}; 
+        // hoac
+        // var objectName = { property1:value1, property2:value2 };
+        // c1: tao mot doi tuong gom thong tin cua ban than
+        var myself = {
+            firstname: "vy",
+            age: 18,
+            eyeColor: blue,
+
+            // c2: tu doi tuong do, tao them 2 phuong thuc work va relax
+            Worker: function () {
+                return `qwertyu`
+            },
+            relax: function () {
+                return `zxcvbn`
+            },
         }
-    //c2: tu doi tuong do, tao them 2 phuong thuc work va relax
+        //   truy cap phuong thuc
+        console.log(myself.Worker())
+        console.log(myself.relax())
+        // truy cap thuoc tinh
+        console.log(myself.firstname)
+        console.log(myself.age)
+        console.log(myself.eyeColor)
 
 
 
-    // truy cap thuoc tinh
-        
-    // truy cap phuong thuc
+        // //===================LOP===============
 
-    //===================LOP===============
+        // // cu phap tao lop
+        function Animal(ten, gioi_tinh) {
+            //tao thuoc tinh
+            this.ten = ten;
+            this.gioi_tinh = gioi_tinh
+            // tao phuong thuc
+            this.getwork = function (work) {
+                return `Tên ${this.ten}`;
+            }
+            this.getrelax = function (relax) {
+                return `gioi_tinh ${this.gioi_tinh}`;
+            }
+        }
+        // khoi tao doi tuong
+        var dog = new Animal('milu', 'male')
+        // truy cap thuoc tinh
+        console.log(dog.ten)
+        console.log(dog.gioi_tinh)
+        // truy cap phuong thuc
+        console.log(dog.getwork());
+        console.log(dog.getrelax());
 
-   // cu phap tao lop
-    //tao thuoc tinh
-    // tao phuong thuc
-    // khoi tao doi tuong
-    // truy cap thuoc tinh
-    // truy cap phuong thuc
-    
-   </script>
+        var meo = new Animal('miu', 'female')
+        // truy cap thuoc tinh
+        console.log(meo.ten)
+        console.log(meo.gioi_tinh)
+        // truy cap phuong thuc
+        console.log(meo.getwork());
+        console.log(meo.getrelax());
+
+
+
+
+
+        // var myself = {
+        //     firstname: "ngoc",
+        //     age: 22,
+        //     gioi_tinh: 'male',
+        //     dia_chi: 'gio_linh',
+        //     work: function () {
+        //         console.log('work')
+        //     },
+        //     relax: function () {
+        //         return 'relax';
+        //     }
+        // }
+        // //truy cap thuoc tinh
+        // console.log(myself.firstname);
+        // console.log(myself.age);
+        // console.log(myself.gioi_tinh);
+        // console.log(myself.dia_chi);
+        // // truy cap phuong thuc
+        // myself.work();  // khong co su tra ve
+        // console.log(myself.relax()); // co su tra ve
+
+        // cu phap khai bao lop
+        //this.thuoctinh1=gia_tri1;
+        //this.thuoc_tinh2=gia_tri1;
+        // khai bao phuong thuc
+        //this phuong_thu_1=function(){
+
+        //}
+
+        /*
+        cu phap khai bao lop
+ 
+ 
+         let Class_name = function(){
+ 
+             // khai bao thuoc tinh
+             this.thuoc_tinh_1 = gia_tri_1;
+             this.thuoc_tinh_2 = gia_tri_2;
+ 
+             //khai bao phuog thuc
+             this phuong_thu_1 = function(){
+ 
+             }
+             this phuong_thu_1 = function(){
+ 
+             }
+         }
+ 
+        */
+        let Human = function (ts_name, ts_age) {
+            //khao bao thuoc tinh
+            this.name = ts_name;
+            this.age = ts_age;
+            this.gioi_tinh = '';
+            this.dia_chi = '';
+            //khai bao phuong thuc
+            this.work = function () {
+
+            }
+            this.relax = function () {
+
+            }
+
+            // setter:thiet lap gia tri thuoc tinh
+            // tao cac phuong thuc setter
+            this.setName = function (ts_name) {
+                // ts_name:trieu vy
+                this.name = ts_name;
+            }
+            this.setAge = function (ts_age) {
+                this.age = ts_age;
+
+            }
+            // getter:tra ve gia tri cac thuoc tinh
+            this.getName = function () {
+                return this.name
+            }
+            this.getAge = function () {
+                return this.age
+            }
+        }
+        let vy = new Human('vy', 18);
+        vy.setName('trieu vy');
+        vy.setAge(22);
+
+        console.log(vy.getName());
+        // console.log(vy.name)
+        console.log(vy.getAge());
+
+
+
+
+    </script>
 </body>
+
 </html>

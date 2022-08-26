@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // class Human {
+        //     constructor(name,gender,weight) {
+        //         // thuoc tinh
+        //         this.name = ts_name;
+        //         this.gender = ts_gender;
+        //         this.weight = 100;
+        //     }
+
+
+        //     // phuong thuc
+        //     an_tao(doi_tuong_TAO) {
+        //         doi_tuong_TAO.giam_khoi_luong();
+        //         // console.log(doi_tuong_TAO);
+        //     }
+
+        //     say(noi_dung) {
+        //         console.log(noi_dung);
+        //     }
+        // }
+
+        // class Apple {
+        //     // phuong thuc khoi tao
+        //     constructor(height) {
+        //         // khai bao thuoc tinh
+        //         this.khoi_luong = 10;
+        //     }
+        //     // khai bao phuong thuc
+        //     giam_khoi_luong() {
+        //         this.khoi_luong--;
+        //     }
+        //     //kiem tra tao con khong
+        //     kiem_tra_rong() {
+        //         if (this.khoi_luong == 0) {
+        //             return true;
+        //         } else {
+        //             return false;
+        //         }
+        //     }
+        //     //tra ve khoi luong
+        //     lay_khoi_luong( ) {
+        //         return this.khoi_luong;
+
+        //     }
+        // }
+
+        // // khoi tao doi tuong tao
+        // let qua_tao = new Apple();
+
+        // // khoi tao Adam
+        // let Adam = new Human('Adam', 'male');
+        // // khoi tao Eva
+        // let Eva = new Human('Eva', 'female');
+
+        // while (!qua_tao.kiem_tra_rong()) {
+        //     Adam.an_tao(qua_tao);
+        //     Adam.say('');
+
+        //     Eva.an_tao(qua_tao);
+        //     Eva.say('Anh an di');
+        // }
+
+        // console.log('Het tao');
+
+
+        class Apple {
+            constructor(weight) {
+                this.weight = weight;
+            }
+            getWeight() {
+                return this.weight;//2
+            }
+
+            setWeight(weight) {
+                this.weight = weight;
+            };
+
+            isEmpty() {
+                if (this.weight <= 0) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+
+            decreaseApple() {
+                if (this.isEmpty()) {
+                    alert("Táo đã hết rồi");
+                } else {
+                    this.weight--;
+                }
+            }
+        }
+
+        class Human {
+            constructor(name, gender, weight) {
+                this.name = name;
+                this.gender = gender;
+                this.weight = weight;
+            }
+            getName() {
+                return this.name;
+            }
+            setName(name) {
+                this.name = name;
+            }
+            getWeight() {
+                return this.weight;
+            }
+
+            isMale() {
+                if (this.gender == 1) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+            getGender() {
+                if (this.isMale()) {
+                    return "Male";
+                } else {
+                    return "Female";
+                }
+            }
+
+            setWeight(weight) {
+                this.weight = weight;
+            }
+
+            say(string) {
+                console.log(string);
+            }
+
+            checkApple(apple) {
+                return apple.isEmpty();
+            }
+
+            eat(apple) {
+                if (apple.getWeight() > 0) {
+                    apple.decreaseApple(); //1
+                    this.weight++; //66
+                } else {
+                    alert("Táo đã hết");
+                }
+            }
+
+            getInfo(human) {
+                alert(human.name + " " + human.weight + " " + human.getGender());
+            }
+        }
+
+
+        let adam = new Human("adam", 1, 65);
+        let eva = new Human("eva", 2, 55);
+        let apple_1 = new Apple(10);
+
+
+        // adam.checkApple(apple_1)
+        adam.say("I am Adam" + "<br>");
+        eva.say("I am Eva" + "<br>");
+
+
+        while (apple_1.isEmpty() !== true) {
+            document.write("Adam ăn táo" + "<br>");
+            adam.eat(apple_1);
+
+            document.write("Quả táo còn: " + "<br>");
+            document.write(apple_1.getWeight() + " đơn vị" + "<br>");
+            document.write("Cân nặng của Adm là: " + adam.getWeight() + " đơn vị" + "<br>");
+
+            document.write("<br>")
+
+            document.write("Eva ăn táo" + "<br>");
+            eva.eat(apple_1);
+
+            document.write("Quả táo còn: " + "<br>");
+            document.write(apple_1.getWeight() + " đơn vị" + "<br>");
+            document.write("Cân nặng là: " + eva.getWeight() + " đơn vị" + "<br>");
+        }
+
+    </script>
+</body>
+
+</html>

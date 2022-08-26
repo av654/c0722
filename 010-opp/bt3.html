@@ -1,0 +1,353 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var Mobile = function(pin,arrMessage,arrInbox,arrMessagesent){
+            this.pin=pin;
+            this.arrmessage;
+            this.arrinbox;
+            this.arrmessagesent;
+
+        }
+        
+    </script>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #dt10 {
+            background-color: aqua;
+            /* margin-left: auto; */
+            border: solid 10px rgb(245, 23, 7);
+            word-wrap: break-word;
+        }
+        #dt11 {
+            background-color: rgb(255, 248, 51);
+            /* margin-right: auto; */
+            border: solid 10px rgb(245, 23, 7);
+            word-wrap: break-word;
+        }
+        #dt1{
+          
+            background-color: rgb(255, 0, 238);
+            border-radius: 30px;
+            min-width: 60px;
+            padding: 19px;
+        }
+        #dt2 {  
+        
+            /* background-color: rgb(255, 0, 238); */
+            border-radius: 30px;
+            min-width: 60px;
+            padding: 19px;
+        }
+        #tin1, #tin {
+            width: 250px; 
+            word-wrap: break-word;
+        }
+        #tin2, #tin3{
+            width: 100px; 
+            word-wrap: break-word;
+        }
+       
+    </style>
+</head>
+<body>
+   <table border="0px" cellspacing="1px" cellpadding="0px"id="dt10" >
+    <tr>
+        <td colspan="2">
+            <input type="textarea" id="stn01" placeholder="Nhập tin nhắn">
+        </td>
+        <td>
+            <p id="pin"></p>
+        </td>
+    </tr>
+        <tr>
+            <td colspan="3">
+                <p id="bat"></p>
+            </td>
+        </tr>
+        <tr>
+            <td><button type="button" id="dt1" onclick="BatDienThoai()">
+                🔓</button
+              ><br /><br /></td>
+            <td> <button type="button" id="dt1" onclick="TatDienThoai()">
+                🔒</button
+              ><br /><br /></td>
+              <td>
+                <button type="button" id="dt1" onclick="SacPin()">🔋</button
+                    ><br /><br />
+            </td>
+         
+        </tr>
+        <tr>
+            <td>
+                  <button type="button" id="dt1" onclick="XemTinNhan()">📩</button>
+                </p>
+              </button>
+            
+            </td>
+            <td>
+                <button type="button" id="dt1" onclick="XemTinNhanDaGui()">
+                    ✉</button
+                  ><br /><br />
+            </td>
+            <td>
+                <button type="button" id="dt1" onclick="GuiTinNhan()">➤ </button
+                    ><br /><br />
+               </td>
+        </tr>
+       
+    </table>
+    <table>
+        <tr>
+            <td colspan="2">
+                <p id="tin"></p>
+            </td>
+            <td>
+                <p id="tin2"></p>
+            </td>
+        </tr>
+        </table><br>
+    <table border="0px" cellspacing="1px" cellpadding="0px" id="dt11">
+        <tr>
+            <td colspan="2">
+                <input type="textarea" id="stn02" placeholder="Nhập tin nhắn">
+            </td>
+            <td>
+                <p id="pin1"></p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <p id="bat1"></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button type="button" id="dt2" onclick="BatDienThoai1()">
+                    🔓</button
+                  ><br /><br />
+            </td>
+            <td>
+                <button type="button" id="dt2" onclick="TatDienThoai1()">
+                    🔒</button
+                  ><br /><br />
+            </td>
+            <td>
+                <button type="button" id="dt2" onclick="SacPin1()"> 🔋</button
+                    ><br /><br />
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <button type="button" id="dt2" onclick="XemTinNhan1()">📩</button>
+            </td>
+            <td>
+                <button type="button" id="dt2" onclick="XemTinNhanDaGui1()">
+                    ✉</button
+                  ><br /><br />
+            </td>
+            <td>
+                <button type="button" id="dt2" onclick="GuiTinNhan1()">➤ </button
+                    ><br /><br />
+            </td>
+        </tr>
+       
+</table>
+<table>
+<tr>
+    <td colspan="2">
+        <p id="tin1"></p>
+    </td>
+    <td colspan="2">
+        <p id="tin3"></p>
+    </td>
+</tr>
+</table>
+​
+    <script>
+      var DienThoai = function () {
+        // thuộc tính
+        this.pin = 100;
+        this.tinnhandangsoan = "";
+        this.tindagui = [];
+        this.hopthuden = [];
+        this.trangthai = false;
+        this.noidung = "";
+        this.tong = 0;
+        // phương thức
+        this.batdienthoai = function () {
+         return this.trangthai = true;
+        };
+        this.tatdienthoai = function (bat1) {
+          
+          if (bat1 == Realme){
+            this.trangthai = false;
+            document.getElementById("bat").innerHTML =
+            "Realme Đã Tắt";
+          } else if (bat1 == Iphone) {
+            this.trangthai = false;
+            document.getElementById("bat1").innerHTML =
+            "Iphone Đã Tắt";
+          }
+        };
+        this.kiemtra = function () {
+            if(this.trangthai){
+                return "↔↔↔↔↔↔↔↔↔↔↔↔↔↔"
+            } 
+        }
+        this.Trangthai = function (bat) {
+          if (this.pin > 0) {
+            if (this.trangthai == true) {
+                if (bat == Realme) {
+                    document.getElementById("bat").innerHTML = Realme.kiemtra()
+                } 
+              else if (bat== Iphone) {
+              document.getElementById("bat1").innerHTML = Iphone.kiemtra()
+                }
+              this.soantinnhan = function (tinnhan) {
+                this.noidung = tinnhan;
+                // this.pin--;
+                return this.pin;
+              };
+              this.guitinhnhan = function (Dt) {
+                if (this.noidung != ""){
+                this.tindagui.push(this.noidung + '<br>');
+                Dt.hopthuden.push(this.noidung + '<br>');
+                this.noidung= ""
+                document.getElementById("stn01").value = ""
+                document.getElementById("stn02").value = ""
+                Dt.xemtinnhan()
+                this.pin--;
+                return this.pin;}
+              };
+              this.xemtinnhan = function () {
+                        // for (var i=0; i< Realme.hopthuden.length ; i++) {
+                document.getElementById("tin").innerHTML = "Iphone : "+ '<br>'+Realme.hopthuden+ '<br>';
+                document.getElementById("tin2").innerHTML ="Bạn : "+ '<br>' + Realme.tindagui + '<br>';
+                        // }
+                        // for (var i=0; i< Iphone.hopthuden.length ; i++) {
+                        document.getElementById("tin1").innerHTML ="Realme : "+ '<br>' +  Iphone.hopthuden + '<br>';
+                        document.getElementById("tin3").innerHTML ="Bạn : "+ '<br>' +  Iphone.tindagui  + '<br>';
+                    // }
+                this.pin--;
+                return this.pin;
+              };
+              this.xemtindagui = function () {
+                alert(this.tindagui);
+                this.pin--;
+                return this.pin;
+              };
+            }
+          } else if (this.trangthai == false) {
+            this.trangthai = false;
+            if (bat == Realme){
+                document.getElementById("bat").innerHTML =
+              "Realme đã tắt";
+            } else if (bat == Iphone){
+          
+              document.getElementById("bat1").innerHTML =
+              "Iphone đã tắt";
+            }
+            return this.pin = 0;
+            return this.trangthai;
+          }
+        };
+        this.nhantinnhan = function (tinnhanden) {
+          this.hopthuden.push(tinnhanden);
+        };
+        this.sacpin = function () {
+          for (var i = this.pin; i <= 100; i++) {
+            if (this.pin == 100) {
+            //   alert("Pin đầy vui lòng rút sạc");
+              break;
+            }
+            this.pin++;
+          }
+        };
+      };
+      var Realme = new DienThoai();
+      var Iphone = new DienThoai();
+      Realme.pin = 15;
+      function BatDienThoai() {
+        Realme.batdienthoai();
+        Realme.Trangthai(Realme)
+      }
+      function TatDienThoai() {
+        Realme.tatdienthoai(Realme);
+      }
+      function XemTinNhan() {
+        Realme.xemtinnhan(Realme);
+      }
+      function XemTinNhanDaGui() {
+        if (Realme.trangthai == true){
+            Realme.xemtindagui();
+        }
+      }
+      function GuiTinNhan() { 
+        if (Realme.trangthai == true) {
+          var guitn = document.getElementById("stn01").value
+        Realme.soantinnhan(guitn);
+        }
+        Realme.guitinhnhan(Iphone);
+      }
+      function SacPin() {
+        Realme.sacpin();
+      }
+      Iphone.pin = 19;
+      function BatDienThoai1() {
+        Iphone.batdienthoai();
+        Iphone.Trangthai(Iphone)
+      }
+      function TatDienThoai1() {
+        Iphone.tatdienthoai(Iphone);
+      }
+      function XemTinNhan1() {
+        Iphone.xemtinnhan(Iphone);
+      }
+      function XemTinNhanDaGui1() {
+        if(Iphone.trangthai == true){
+            Iphone.xemtindagui();
+        }
+      }
+      function GuiTinNhan1() {  
+        if (Iphone.trangthai == true) {
+          var guitn1 = document.getElementById("stn02").value
+          Iphone.soantinnhan(guitn1);
+        }
+        Iphone.guitinhnhan(Realme);
+      }
+      function SacPin1() {
+        Iphone.sacpin();
+      }
+      onchange = function () {
+          Iphone.Trangthai();
+          document.getElementById("pin1").innerHTML =
+          Iphone.pin + "%"+"🔋";
+          Realme.Trangthai();
+        document.getElementById("pin").innerHTML =
+           Realme.pin + "%"+"🔋";
+        }
+    </script>
+</body>
+</html>
+<script>
+ var a= 5 //6
+ var b=6
+ var sum 
+</script>
+
+
