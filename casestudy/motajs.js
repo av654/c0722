@@ -17,7 +17,7 @@
               if (document.getElementById("timkiem").value ==  product[k]) {
                 let a;
                 a =
-                  "<table cellspacing='4px' cellpadding='' width='1500px'>";
+                  "<table cellspacing='4px' cellpadding='' width='1480px'>";
                 a +=
                   "<td style='text-align:center' id='prd' width='300px'>" +
                   product[k] +
@@ -64,21 +64,7 @@
             bang(product);
           }
         }
-      var add0 =  document.getElementById("addd")
-      add0.disabled = true
-      var chinhsua0 =  document.getElementById("delete1")
-      chinhsua0.disabled = true
-      var timkiem0 =  document.getElementById("timkiem1")
-      timkiem0.disabled = true
-      function add01(){
-        div.style.display = 'block';
-        add0.disabled = false
-        chinhsua0.disabled = false
-        timkiem0.disabled = false
-      }
-      function offmota(){
-        div.style.display = 'none';
-      }
+ 
         function them_sp() {
           var add = document.getElementById("newProduct").value;
           var mota = document.getElementById("motasp").value;
@@ -109,9 +95,9 @@
           }
         }
         var a, i
-        // var anh = document.getElementById("img").value
+        
         function bang(product) {
-          a = "<table cellspacing='4px' cellpadding='' width='1500px'>";
+          a = "<table cellspacing='4px' cellpadding='' width='1480px'>";
           for (i = 0; i < product.length; i++) {
             a +=
               "<td style='text-align:center' id='prd'  width='300px'>" +
@@ -119,7 +105,7 @@
               "</td>";
               a +=
               "<td style='text-align:center' id='prd'  width='100px'>" +
-          gia[i] +'<br>VNĐ'
+          gia[i] +'<br.>VNĐ'
               "</td>";
               a +=
               "<td style='text-align:center' id='texta' width='700px' height='50 px' >" +
@@ -136,21 +122,6 @@
               ")'>(" +
               (i + 1) +
               ")</td>";
-
-
-
-            //   a +=
-            //       "<td style='text-align:center' id='td1' width='60px'> <input  id='cst' type='button' value='Lưu' onclick='update(" +
-            //       i +
-            //       ")' ></td>";
-            // a +=
-            //   "<td style='text-align:center' id='td1' width='70px'> <input  id='csmt' type='button' value='Xóa' onclick='dele(" +
-            //   i +
-            //   ")'>(" +
-            //   (i + 1) +
-            //   ")</td>";
-
-
 
 
             a = a + "</tr>";
@@ -278,8 +249,8 @@
         sl.innerHTML = 'Không có Sản Phẩm'
       } 
         }
-        // bang(product);
+        
       }
         const div = document.getElementById("motasp")
       
-        div.style.display = 'none'
+    
