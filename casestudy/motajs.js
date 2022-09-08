@@ -69,7 +69,7 @@
           var add = document.getElementById("newProduct").value;
           var mota = document.getElementById("motasp").value;
           let img =  document.getElementById('img').value;
-          let gia1 = document.getElementById("Gia").value;
+          let gia1 = parseInt(document.getElementById("Gia").value) ;
           if (add != "") {
             if (!product.includes(add)) {
               product.push(add);
@@ -105,7 +105,7 @@
               "</td>";
               a +=
               "<td style='text-align:center' id='prd'  width='100px'>" +
-          gia[i] +'<br.>VNĐ'
+          gia[i].toLocaleString('en-US') +'<br.>VNĐ'
               "</td>";
               a +=
               "<td style='text-align:center' id='texta' width='700px' height='50 px' >" +
@@ -246,7 +246,7 @@
         if(h> 0){
           sl.innerHTML = 'Có '+ h + " Sản Phẩm"
       }else {
-        sl.innerHTML = 'Không có Sản Phẩm'
+        sl.innerHTML = 'Không có sản phẩm'
       } 
         }
         

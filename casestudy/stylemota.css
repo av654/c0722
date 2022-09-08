@@ -5,8 +5,8 @@ body {
   
   
       html {
-        background-color: rgb(251, 255, 255);
-        /* background-color: #b7f5f5; */
+        background-color: rgb(207, 221, 221);
+        background-color: #dce7e7;
         background-size: cover;
       }
       div {
@@ -20,7 +20,7 @@ body {
       #motasp,
       #timkiem , #img , #Gia{
         background-color: rgb(255, 255, 255);
-        color: red;
+        color: #070707;
         border-radius: 7px/7px;
         
      
@@ -69,7 +69,7 @@ body {
    
      
       h1 , p , b{
-        color: #ff0000;
+        color: #002fff;
       }
       #motasp {
         background-color: rgb(255, 255, 255);
