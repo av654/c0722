@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="canvas" width="300" height="150" style="border:1px solid #3054cb; "></canvas>
+    <script>
+    var Rectangle = function (toa_do_x, toa_do_y, ts_width, ts_height,ts_color) {
+        this.x = toa_do_x;
+        this.y = toa_do_y;
+        this.width = ts_width;
+        this.height = ts_height;
+        this.color = ts_color;
+        this.render = function () {
+            var canvas = document.getElementById('canvas');
+            var ctx = canvas.getContext("2d");
+            ctx.strokeStyle = this.color;
+            ctx.fillRect(this.x,this.x,this.width,this.height);
+            ctx.stroke()
+        }
+    }
+    var rectangle = new Rectangle(10, 10, 270, 125,"#3054cb");
+    rectangle.render()
+    </script>
+</body>
+
+</html>
