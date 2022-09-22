@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // cach 1
+        // let browser = prompt("Enter browser name!")
+        // switch (browser) {
+        //     case 'Edge':
+        //         alert("You've got the Edge!");
+        //         break;
+        //     case 'Chrome':
+        //     case 'Firefox':
+        //     case 'Safari':
+        //     case 'Opera':
+        //         alert('Okay we support these browsers too');
+        //         break;
+        //     default:
+        //         alert('We hope that this page looks ok!');
+        // }
+        // cach 2
+        // let browser = prompt("Enter browser name!")
+        // if(browser == 'Edge'){
+        //     alert("You've got the Edge!");
+        // }
+        // else if(browser == 'Chrome' || browser == 'Firefox' || browser == 'Safari' || browser == 'Opera'){
+        //     alert('Okay we support these browsers too');
+        // }
+        // else{
+        //     alert('We hope that this page looks ok!');
+        // }
+        // Bai 1
+        var a= prompt("nhap so a");
+        var b=prompt("nhap so b");;
+        if(a%b == 0){
+            console.log('a chia het cho b')
+        }else{
+            console.log('a khong chia het cho b')
+        }
+        //bai2
+        var tuoi = parseInt(prompt("nhap so a"));
+        if (tuoi > 15) {
+            console.log('du dieu kien vao lop 10');
+        } else {
+            console.log('khong du dieu kien vao lop 10')
+        }
+        Bai3
+        var so_nguyen= parseInt(prompt("nhap so"))
+        if (so_nguyen >0) {
+            console.log(`so ${so_nguyen} lon hon 0` )
+        } else {
+            console.log(`so ${so_nguyen} be hon 0`)
+
+        }
+
+        Bai4
+        var a =prompt('nhap so a');
+        var b =prompt('nhap so b');
+        var c =prompt('nhap so c');
+
+        if (a>b && a>c) {
+            console.log(`so ${a} la so lon nhat`)
+        } else if(b>c && b>a) {
+            console.log(`so ${b} la so lon nhat`);
+        }
+        else {
+            console.log(`so ${c} la so lon nhat`)
+        }
+        // Bai5
+        let diem_thi_giua_ky = parseInt(prompt('nhap diem giua ky'));
+        let diem_thi_cuoi_ki = parseInt(prompt('nhap diem cuoi ki'));
+        let diem_kiem_tra = parseInt(prompt('nhap diem kiem tra'));
+
+        let diem_tb= parseInt((diem_kiem_tra+diem_thi_giua_ky+diem_thi_cuoi_ki))/3;
+            if (diem_tb >= 8) {
+                console.log('hoc sinh gioi')
+            } else if(6.5 <= diem_tb <8) {
+                console.log('hoc sinh kha')
+            } else if( 5 <= diem_tb <6.5) {
+                console.log('hoc sinh trung binh')
+            }
+            else{
+                console.log('hoc sinh yeu')
+            }
+        // Bai6
+        var mang = prompt('nhap mang')
+        var sophut = prompt('nhap so phut goi')
+
+        if (mang == 'viettel') {
+            var cuoc = sophut * 1000
+            document.write('số tiền phải trả nội mạng:' + cuoc + 'vnd')
+        } else {
+            var cuoc = sophut * 2000
+            document.write('số tiền phải trả ngoại mạng:' + cuoc + 'vnd')
+
+        }
+
+        var mang = prompt('nhap mamg')
+        var sophut = prompt ('nhap so phut goi')
+        if (mang== 'viettel') {
+            var cuoc = sophut *1000
+            document.write( `so tien phai tra noi mang: ${cuoc}  `)
+        } else {
+            var cuoc = sophut *2000
+            document.write(`so tien phai tra ngoai mang  ${cuoc} `)
+
+        }
+
+        // Bai7
+        var nhap_so_tien = prompt('so tien')
+        var hoadhong1 = 0.1;
+        var hoadhong2 = 0.12;
+        var hoadhong3 = 0.15;
+
+
+ 
+        if (nhap_so_tien < 1000000) {
+            let hoa_hong = nhap_so_tien * hoadhong1;
+            console.log(hoa_hong)
+        }else if (nhap_so_tien < 2000000) {
+            let hoa_hong = nhap_so_tien * hoadhong2;
+            console.log(hoa_hong)
+        } else {
+            let hoa_hong = nhap_so_tien * hoadhong3;
+            console.log(hoa_hong)
+        }
+
+
+    </script>
+</body>
+
+</html>

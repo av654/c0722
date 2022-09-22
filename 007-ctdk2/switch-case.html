@@ -1,86 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-<script>
+    <script>
 
-    // var thu=2
+        
 
+        var thang = prompt('thang');
+        switch (thang) {
+            case 1:
+            case 3:    
+            case 5:    
+            case 7:    
+            case 8:    
+            case 10:    
+            case 12:    
+                console.log('co 31 ngay')                
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                console.log('co 30 ngay')
+                break;
+            default:
+                console.log('28 ngay hoac 29 ngay')
+                break;  
+        }
 
-
-    // switch (thu) {
-    //     case 2:
-    //         console.log('di lam')
-    //         break;
-    //         case3:
-    //     console.log('di lam')
-    //     break;
-    //     case chu_nhat:
-    //     console.log('sinh hoat cau lac bo')
-    //     default:
-    //         console.log('o nha')
-    //         break;
-    //     }
-
-
-    //     var thu = 2;
-    //     switch (true) {
-    //         case thu>2 && thu6 <=  :
-
-
-        //         break;
-                        
-        //     default:
-        //         break;
-        // }
-
-        // var thang = 1;
-        // switch (thang) {
-        //     case 1:
-        //     case 3:    
-        //     case 5:    
-        //     case 7:    
-        //     case 8:    
-        //     case 10:    
-        //     case 12:    
-        //         console.log('co 31 ngay')                
-        //         break;
-
-        //     case 4:
-        //     case 6:
-        //     case 9:
-        //     case 11:
-            
-        //         console.log('co 30 ngay')
-        //         break;
-        //     default:
-                
-        //         console.log('28 ngay hoac 29 ngay')
-        //         break;
-        // }
-
-        var thang =2;
+        var thang = prompt('nhap thang  ');
         switch (true) {
-            case thang ==1 || thang==3 || thang==5 || thang == 7 || thang == 8|| thang== 10|| thang ==12:
+            case thang == 1 || thang == 3 || thang == 5 || thang == 7 || thang == 8 || thang == 10 || thang == 12:
                 console.log('31 ngay')
                 break;
-                case thang==4||thang==6||thang==9||thang==11:
-                    console.log('30 ngay')
-                    break;
-        
+            case thang == 4 || thang == 6 || thang == 9 || thang == 11:
+                console.log('30 ngay')
+                break;
+
             default:
                 console.log('28 ngay hoac 29 ngay')
                 break;
         }
+            // toan tu ba ngoi
+
+        var yearold =18 ;
+       yearold >= 18 ? alert('uong bia'): alert('uong nuoc ngot')
+            
 
 
 
+      
 
-</script>
+
+    </script>
 </body>
+
 </html>
