@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="500" height="500"> </canvas>
+
+    <script>
+        // // vẽ đường thẳng
+        // var c = document.getElementById("myCanvas");
+        // var ctx = c.getContext("2d");
+        // //điểm bát đầu
+        // ctx.moveTo(0, 200);
+        // // điểm kết thúc
+        // ctx.lineTo(400, 200);
+        // ctx.stroke();
+
+        // // vẽ hình tròn
+        // var c = document.getElementById("myCanvas");
+        // var ctx = c.getContext("2d");
+        // ctx.beginPath();
+        // ctx.arc(95, 50, 50, 0, 2 * Math.PI);
+        //  // arc (x,y,r,sAngle,eAngle) 
+        // ctx.stroke();
+        // // vẽ hình chữ nhật
+        // ctx.fillStyle = '#FF69B4';
+        // ctx.fillRect(100, 400, 400, 200);
+
+        let Rectangle = function () {
+            // thuoc tinh
+            this.chieu_dai = 0
+            this.chieu_rong = 0
+            //phuong thuc
+            this.tinh_chu_vi = function () {
+                let ket_qua = (this.chieu_dai + this.chieu_rong) * 2
+                console.log(ket_qua);
+            }
+            this.tinh_dien_tich = function () {
+                let ket_qua = (this.chieu_dai + this.chieu_rong)
+                console.log(ket_qua);
+            }
+            this.hien_thi = function () {
+                var c = document.getElementById("myCanvas");
+                var ctx = c.getContext("2d");
+                ctx.fillStyle = '#FF69B4';
+                ctx.fillRect(100, 400, this.chieu_dai, this.chieu_rong);
+            }
+        }
+        // khoi tao doi tuong
+        let hcn = new Rectangle();
+        //thiet lap gia tri thuoc tinh chieu dai vaf chieu rong
+        hcn.chieu_dai = 200
+        hcn.chieu_rong = 100
+        //goi phuong thuc tinh chu vi
+        hcn.tinh_chu_vi();
+        //goi phuong thuc tinh dien tich
+        hcn.tinh_dien_tich();
+        //goi phuong ve hinh
+        hcn.hien_thi()
+
+        
+
+
+    </script>
+</body>
+
+</html>

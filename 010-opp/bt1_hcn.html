@@ -14,89 +14,33 @@
 
 <body>
     <script>
+        let Rectangle = function () {
+            this.chieu_dai = 0
+            this.chieu_rong = 0
+            this.tinh_chu_vi = function () {
+                let ket_qua = (this.chieu_dai + this.chieu_rong) * 2
+                console.log(ket_qua);
+            }
+            this.tinh_dien_tich = function () {
+                let ket_qua = (this.chieu_dai + this.chieu_rong)
+                console.log(ket_qua);
+            }
+            this.hien_thi = function () {
+                var c = document.getElementById("myCanvas");
+                var ctx = c.getContext("2d");
+                ctx.fillStyle = '#800080';
+                ctx.fillRect(100, 400, this.chieu_dai, this.chieu_rong);
+            }
+        }
+        let hcn=new Rectangle();
+        hcn.chieu_dai=200
+        hcn.chieu_rong=100
+        hcn.tinh_chu_vi();
+        hcn.tinh_dien_tich();
+        hcn.hien_thi();
 
-        let Rectangle = function (chieu_dai, chieu_rong) {
-            this.chieu_dai = chieu_dai;
-            this.chieu_rong = chieu_rong;
-            this.getChieu_dai = function () {
-                return this.chieu_dai;
-            }
-            this.getChieu_rong = function () {
-                return this.chieu_rong;
-            }
-            this.getChu_vi = function () {
-                return this.chieu_dai * 2 + this.chieu_rong * 2;
-            }
-            this.getDien_tich = function () {
-                return this.chieu_dai * this.chieu_rong;
-            }
-        }  
-        let rectangle = new Rectangle(prompt('nhap chieu dai'), prompt('nhap chieu rong'))
-        let chu_vi = rectangle.getChu_vi();
-        let dien_tich = rectangle.getDien_tich();
-        alert(chu_vi);
-        alert(dien_tich)
     </script>
 
 </body>
 
 </html>
-
-
-
-
-
-
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <title>[Bài tập] Xây dựng lớp mô tả hình chữ nhật</title>
-</head>
-
-<body>
-    <h3>Draw Rectangle</h3>
-    <input id="width" type="number" placeholder="Width">
-    <input id="height" type="number" placeholder="Height">
-    <button type="submit" id="draw" onclick="creatRectangle()">New</button>
-    <h4>Result: </h4><span id="result"></span>
-    <canvas id="rectangle" style=" padding-top: 30px"></canvas>
-    <script>
-        function Rectangle(width, height) {
-            this.width = width;
-            this.height = height;
-            area = width * height;
-            perimeters = (width + height) * 2;
-            return [area, perimeters];
-        }
-        function getRandomHex() {
-            return Math.floor(Math.random() * 255);
-        }
-        function getRandomColor() {
-            let red = getRandomHex();
-            let green = getRandomHex();
-            let blue = getRandomHex();
-            return "rgb(" + red + "," + blue + "," + green + ")";
-        }
-        function creatRectangle() {
-            let ctx = document.getElementById("rectangle").getContext("2d");
-            ctx.canvas.width = window.innerWidth;
-            ctx.canvas.height = window.innerHeight;
-            ctx.clearRect(0, 0, 1366, 768);
-            let x = parseInt(document.getElementById("width").value);
-            let y = parseInt(document.getElementById("height").value);
-            let color = getRandomColor();
-            new Rectangle(x, y);
-            ctx.beginPath();
-            ctx.rect(0, 0, x * 10, y * 10);
-            ctx.stroke();
-            ctx.fillStyle = color;
-            ctx.fill();
-            document.getElementById("result").innerHTML = "Area = " + area + " / Perimeter = " + perimeters;
-        }
-    </script>
-</body>
-
-</html> -->

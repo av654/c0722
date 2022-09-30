@@ -65,6 +65,7 @@ function timkiem_sp() {
   }
 }
 
+
 function them_sp() {
   var add = document.getElementById("newProduct").value;
   var mota = document.getElementById("motasp").value;
